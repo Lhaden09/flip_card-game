@@ -1,0 +1,21 @@
+/* Extra styles for the intro page and the Home link (works with your existing style.css) */
+.intro{min-height:100vh;display:flex;flex-direction:column;justify-content:center}
+.intro h1{font-size:clamp(2.2rem,7vw,3.6rem)}
+.btn{display:inline-block;text-decoration:none;border-radius:999px;padding:14px 38px;font-size:1.2rem;font-weight:800;color:var(--navy);
+  background:linear-gradient(135deg,#ffd166,var(--gold));box-shadow:0 4px 0 #c98a00,0 6px 14px #0005;transition:transform .15s;margin-top:8px}
+.btn:hover{transform:translateY(-2px)}
+.btn:active{transform:translateY(3px);box-shadow:0 1px 0 #c98a00}
+.btn.pulse{animation:bounce 1.2s infinite}
+.home{position:absolute;top:14px;left:16px;color:#fff;text-decoration:none;font-weight:700;background:#ffffff22;border:1px solid #ffffff44;border-radius:999px;padding:6px 14px}
+.home:hover{background:#ffffff44}
+
+/* Intro page: course label, mission and rules */
+.course{display:inline-block;margin:0 auto 6px;padding:5px 16px;border-radius:999px;background:#ffffff22;border:1px solid #ffffff44;font-size:.85rem;font-weight:700;letter-spacing:.5px;color:#dbe8ff}
+.brief{padding:18px 24px}
+.mission{margin:0 0 12px;font-size:1.1rem;line-height:1.5}
+.mission b{color:var(--gold)}
+.rules{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.rules li{display:flex;gap:12px;align-items:center;background:#ffffff14;border-radius:12px;padding:10px 12px;line-height:1.4}
+.rules li>span{font-size:1.6rem}
+.soundline{margin:14px 0 0}
+.soundline .soundbtn{padding:6px 16px;font-size:.9rem}

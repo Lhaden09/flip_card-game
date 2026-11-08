@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MOOC Match</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="intro.css">
+</head>
+<body>
+<a class="home" href="index.html">🏠 Home</a>
+<main class="wrap">
+  <h1>🎓 MOOC Match</h1>
+
+  <div class="bar">
+    <span class="stat">Round: <span id="round">1/6</span></span>
+    <span class="stat">Score: <span id="score">0</span></span>
+    <span class="stat">Matched: <span id="matched">0</span>/<span id="total">2</span></span>
+    <span class="stat">Time: <span id="time">0</span>s</span>
+  </div>
+  <div class="bar">
+    <button id="startBtn" onclick="start()">Restart</button>
+    <button id="soundBtn" class="soundbtn" onclick="toggleSound()" aria-label="Toggle sound">🔊 Sound On</button>
+  </div>
+
+  <h2 id="roundTitle" class="roundTitle"></h2>
+  <p id="roundTip" class="roundTip"></p>
+  <div class="grid cols2" id="grid"></div>
+  <div id="msg"></div>
+  <button id="nextBtn" class="next" style="display:none" onclick="nextRound()">Next Round ➜</button>
+</main>
+
+<div id="win" class="win">
+  <div id="confetti" class="confetti"></div>
+  <div class="winbox">
+    <div class="trophy">🏆</div>
+    <h2>Congratulations!</h2>
+    <h3 id="winTitle">Well Done!</h3>
+    <p>You completed all rounds of <b>MOOC Match</b> and learned about online courses!</p>
+    <div id="winStars" class="winstars">⭐⭐⭐</div>
+    <div class="winstats">
+      <div><b id="winScore">0</b><span>Score</span></div>
+      <div><b id="winMoves">0</b><span>Tries</span></div>
+      <div><b id="winTime">0s</b><span>Time</span></div>
+    </div>
+    <button onclick="playAgain()">Play Again 🔄</button>
+    <button class="close" onclick="closeWin()">Close</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+<script>
+  // Begin Round 1 straight away when the game page opens
+  start();
+</script>
+</body>
+</html>

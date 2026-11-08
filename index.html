@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MOOC Match</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="intro.css">
+</head>
+<body>
+<main class="wrap intro">
+  <div class="course">Class IX · Digital Technology and Innovation · Chapter 8.5</div>
+  <h1>🎓 MOOC Match</h1>
+  <p class="sub">Online Courses and MOOC platforms</p>
+
+  <section class="howto brief">
+    <p class="mission"><b>Your mission:</b> flip the cards and match each idea with its correct partner.</p>
+    <ul class="rules">
+      <li><span>🃏</span><div><b>Flip</b> two cards at a time, by tapping or clicking.</div></li>
+      <li><span>✅</span><div><b>Match</b> = <b>+10 points</b>. No match = the cards turn back, so try again.</div></li>
+      <li><span>🏁</span><div>Find all the pairs to finish a round, then press <b>Next Round</b>.</div></li>
+      <li><span>🔥</span><div>Rounds get <b>harder</b>: 2 pairs, then 3, 4 and finally 5 pairs.</div></li>
+      <li><span>🔊</span><div>Listen for the sounds as you play.</div></li>
+    </ul>
+  </section>
+
+  <div><a class="btn pulse" href="game.html">▶ Start the game</a></div>
+  <p class="soundline"><button id="introSound" class="soundbtn" onclick="toggleIntroSound()">🔊 Sound: on</button></p>
+</main>
+<script>
+  // Shares the same setting as the game page
+  let on = true;
+  try { on = localStorage.getItem("moocSound") !== "off"; } catch(e){}
+  const b = document.getElementById("introSound");
+  function paint(){ b.textContent = on ? "🔊 Sound: on" : "🔇 Sound: off"; b.classList.toggle("off", !on); }
+  function toggleIntroSound(){ on = !on; try { localStorage.setItem("moocSound", on ? "on" : "off"); } catch(e){} paint(); }
+  paint();
+</script>
+</body>
+</html>
